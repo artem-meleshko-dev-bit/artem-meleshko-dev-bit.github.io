@@ -1,0 +1,30 @@
+@import "normalize.css";
+@import "nullstyle.scss";
+@import 'variables';
+@import 'sections/header.scss';
+@import 'sections/banner.scss';
+@import 'sections/features.scss';
+@import "sections/works.scss";
+@import 'sections/team.scss';
+@import 'sections/download.scss';
+@import 'sections/footer.scss';
+@import 'sections/adaptive.scss';
+
+body {
+   font-family: $fontmain;
+}
+
+.container {
+   max-width: $maxwidth;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.lock {
+   overflow: hidden;
+}
+
+.active {
+   top: 0;
+   background: #31334d;
+}

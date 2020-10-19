@@ -1,0 +1,93 @@
+@import '../variables.scss';
+
+
+.header {
+   padding-top: 38px;
+
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   &__body {  
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-bottom: 1px solid #4f5167;
+      padding-bottom: 38px;
+
+      
+   }
+
+   &__navigation {
+      margin-left: auto;
+   }
+
+   .active {
+      top: 0;
+      background: #31334d;
+      border: none;
+   }
+
+   &__logo {
+      z-index: 3;
+      img {
+         display: block;
+         max-width: 100%;
+         height: auto;
+      }
+   }
+
+   &__menu {
+      display: flex;
+      position: relative;
+      z-index: 2;
+   }
+
+   &__item {
+      margin-left: 55px;
+   }
+
+   &__link {
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
+      opacity: 0.75;
+      text-transform: uppercase;
+
+      position: relative;
+
+      &:after {
+         content: '';
+         position: absolute;
+
+         height: 2px;
+         width: 0;
+         background: #fff;
+         bottom: -5px;
+         left: 0;
+
+         transition: width .2s linear
+      }
+
+      &:hover:after {
+         width: 100%;
+      }
+   }
+
+   &__burger.active:before {
+      transform: rotate(45deg);
+      top: 9px;
+   }
+
+   &__burger.active span {
+      transform: scale(0);
+   }
+
+   &__burger.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+   }
+}
+

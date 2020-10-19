@@ -1,0 +1,80 @@
+@import '../variables.scss';
+
+.team {
+   
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+   }
+
+   &__item {
+      flex-basis: 25%;
+      padding: 0 15px;
+
+      &:first-child {
+         margin-left: 0;
+      }
+   }
+
+   &__image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+   }
+
+   &__content {
+   }
+
+   &__name {
+      font-size: 22px;
+      color: $black;
+      margin-top: 25px;
+   }
+
+   &__prof {
+      font-size: 13px;
+      color: $red;
+      text-transform: uppercase;
+      margin-top: 10px;
+   }
+
+   &__text {
+      font-size: 14px;
+      line-height: 20px;
+      color: $gray;
+      margin-top: 22px;
+
+      margin-bottom: 30px;
+   }
+
+   &__social {
+      display: flex;
+   }
+
+   &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #e8ecee;
+
+      margin-right: 8px;
+
+      &:hover {
+         background: #e8ecee;
+         transition: all 0.3s ease 0s;
+      }
+
+      &:hover .team__icon {
+         fill: $black;
+         transition: all 0.3s ease 0s;
+      }
+   }
+
+   &__icon {
+      fill: #c6cacc;
+      height: 18px;
+   }
+}
