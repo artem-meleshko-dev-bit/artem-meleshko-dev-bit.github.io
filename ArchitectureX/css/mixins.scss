@@ -1,0 +1,52 @@
+@mixin fontStyleHead ($color) {
+   font-family: $fontheading, serif;
+   font-size: 32px;
+   line-height: 48px;
+   font-style: italic;
+   color: $color;
+
+   text-align: center;
+}
+
+@mixin decor {
+   font-family: $fontheading, serif;
+   font-style: italic;
+   font-size: 32px;
+   color: #000;
+   display: block;
+   position: relative;
+   width: 160px;
+   margin: 0 auto;
+   padding-left: 65px;
+   
+   &::before, &::after {
+      content: '';
+      display: block;
+
+      height: 2px;
+      width: 48px;
+
+      position: absolute;
+      background: #7f7f7f;
+   }
+
+   &::before {
+      left: 0;
+      top: 50%;
+   }
+
+   &::after {
+      right: 0;
+      top: 50%;
+   }
+}
+
+@mixin headSubtitle {
+   font-family: 'Raleway', Arial, sans-serif;
+   font-weight: 500;
+   font-size: 14px;
+   color: #4a4a4a;
+   text-align: center;
+   line-height: 18px;
+   margin-top: 30px;
+}
