@@ -1,0 +1,159 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.blog {
+   padding: 100px 0;
+   &__head {
+   }
+
+   &__subtitle {
+      @include fontdecor;
+   }
+
+   &__title {
+      @include fonttitle;
+      margin-top: 20px;
+      position: relative;
+
+      &:after {
+         content: '';
+         display: block;
+         position: absolute;
+         width: 60px;
+         height: 3px;
+         background: #f38181;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -40px;
+      }
+   }
+
+   &__body {
+      display: flex;
+      margin: 0 -15px;
+      margin-top: 90px;
+   }
+
+   &__col {
+      flex-basis: 33.333%;
+      padding: 0 15px;
+   }
+
+   &__item {
+      
+   }
+
+   &__photo {
+      position: relative;
+   }
+
+
+   &__image {
+      max-width: 100%;
+      height: auto;
+   }
+   
+
+   &__info {
+   }
+}
+
+.info-blog {
+   border-bottom: 1px solid #e5e5e5;
+   &__title {
+      font-size: 14px;
+      color: $colortitle;
+      text-transform: uppercase;
+
+      margin-top: 15px;
+   }
+
+   &__text {
+      font-family: $fonttext;
+      font-size: 15px;
+      line-height: 24px;
+      color: $colortext;
+
+      margin-top: 15px;
+      margin-bottom: 20px;
+   }
+
+   &__wrapper {
+      margin-top: 20px;
+   }
+
+   &__view {
+      padding-left: 27px;
+      background: url(../img/icons/view.png) no-repeat left;
+      margin-right: 20px;
+   }
+
+   &__comments {
+      padding-left: 23px;
+      background: url(../img/icons/comment.png) no-repeat left;
+   }
+}
+
+.date-blog {
+   width: 60px;
+   height: 70px;
+
+   position: absolute;
+   bottom: 0;
+   left: -10px;
+   bottom: 10px;
+
+   background: #95e1d3;
+   &__date {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 13px;
+   }
+
+   &__month {
+      font-family: $fonttext;
+      font-size: 15px;
+      color: #fff;
+      font-weight: 300;
+      font-style: italic;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3px;
+   }
+}
+
+@media (max-width: 768px) {
+   .blog {
+      padding-bottom: 50px;
+      &__body {
+         display: block;
+      }
+
+      &__col {
+         flex-basis: 50%;
+         padding: 0;
+         text-align: center;
+
+         margin-bottom: 40px;
+      }
+
+      &__photo {
+         display: block;
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+
+   .date-blog {
+      left: 10px;
+      bottom: 15px;
+   }
+}

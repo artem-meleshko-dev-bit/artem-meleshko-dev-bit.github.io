@@ -1,0 +1,83 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.devices { 
+   background: url(../img/devices-bg.jpg) no-repeat;
+   background-size: cover;
+   padding-top: 100px;
+   &__head {
+   }
+
+   &__subtitle {
+      @include fontdecor;
+   }
+
+   &__title {
+      @include fonttitle;
+      margin-top: 20px;
+      position: relative;
+
+      &:after {
+         content: '';
+         display: block;
+         position: absolute;
+         width: 60px;
+         height: 3px;
+         background: #f38181;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -40px;
+      }
+   }
+
+   &__body {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      margin-top: 85px;
+   }
+
+   &__item {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+   }
+
+   &__item_iphone {
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      z-index: 1;
+   }
+}
+
+@media (max-width: 768px) {
+   .devices {
+      &__item_iphone {
+         display: none;
+      }
+   }
+}
+
+@media (max-width: 570px) {
+   .devices {
+
+      &__title {
+         font-size: 24px;
+
+         &:after {
+            bottom: -20px;
+         }
+      }
+
+      &__subtitle {
+         font-size: 20px;
+      }
+
+      &__body {
+         margin-top: 50px;
+      }
+      
+   }
+}

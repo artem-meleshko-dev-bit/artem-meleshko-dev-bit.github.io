@@ -1,0 +1,151 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.about {
+   padding-top: 85px;
+   &__head {
+   }
+
+   &__subtitle {
+      @include fontdecor;
+      color: $colortitle;
+   }
+
+   &__title {
+      @include fonttitle;
+      margin-top: 20px;
+      position: relative;
+
+      &:after {
+         content: '';
+         display: block;
+         position: absolute;
+         width: 60px;
+         height: 3px;
+         background: #f38181;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -40px;
+      }
+   }
+
+   &__text {
+      @include fonttext;
+      text-align: center;
+      max-width: 960px;
+      margin: 0 auto;
+      margin-top: 80px;
+
+      margin-bottom: 85px;
+   }
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -15px;
+      padding-bottom: 110px;
+   }
+
+   &__col {
+      flex-basis: 33.333%;
+      padding: 0 15px;
+   }
+
+   &__item {
+      
+      background: #95e1d3;
+
+      &:hover .about__photo {
+         opacity: .1;
+      }
+
+      &:hover .about__image {
+         transform: translate3d(-10px, -10px, 0);
+      }
+
+      &:hover .about__absolute {
+         opacity: 1;
+      }
+   }
+
+   &__image {
+      background: linear-gradient(to bottom, #f38181, #fce38a);
+      transition: transform .2s linear;
+
+      position: relative;
+   }
+
+   &__photo {
+      transition: opacity 0.2s linear;
+      display: block;
+      max-width: 100%;
+   }
+
+   &__absolute {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      text-align: center;
+
+      opacity: 0;
+      transition: opacity .2s linear;
+   }
+
+   &__icon {
+      margin-bottom: 10px;
+   }
+
+   &__content {
+      font-size: 18px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+   }
+}
+
+@media (max-width: 768px) {
+   .about {
+      padding-top: 40px;
+
+      &__title {
+         font-size: 24px;
+
+         &:after {
+            bottom: -20px;
+         }
+      }
+
+      &__subtitle {
+         font-size: 20px;
+      }
+
+      &__text {
+         font-size: 12px;
+         margin-top: 50px;
+         margin-bottom: 40px;
+      }
+
+      &__body {
+         display: block;
+         margin-left: 0;
+         margin-right: 0;
+         padding-bottom: 40px;
+      }
+
+      &__col {
+         flex-basis: 100%;
+         padding: 0;
+         margin-bottom: 30px;
+
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+
+      &__item {
+         max-width: 380px;
+         margin: 0 auto;
+      }
+   }
+}

@@ -1,0 +1,140 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.clients {
+   padding: 100px 0;
+   background: url(../img/clients-bg.jpg) no-repeat;
+   background-size: cover;
+   &__head {
+
+   }
+
+   &__subtitle {
+      @include fontdecor;
+   }
+
+   &__title {
+      @include fonttitle;
+      position: relative;
+      margin-top: 20px;
+
+      &:after {
+         content: '';
+         display: block;
+         position: absolute;
+         width: 60px;
+         height: 3px;
+         background: #f38181;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -40px;
+      }
+   }
+
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin: 0 -15px;
+      margin-top: 125px;
+      
+   }
+
+   &__col {
+      flex: 1 0 50%;
+      padding: 20px 15px;
+   }
+
+   &__item {
+      display: flex;
+      
+   }
+
+   &__image {
+      margin-right: 30px;
+      display: block;
+      max-width: 100%;
+   }
+
+   &__name {
+      font-size: 14px;
+      color: $colortitle;
+      text-transform: uppercase;
+   }
+
+   &__prof {
+      font-family: $fonttext;
+      font-size: 15px;
+      color: $colortitle;
+      font-weight: 300;
+      font-style: italic;
+
+      margin-top: 15px;
+
+      position: relative;
+
+      &:after {
+         content: '';
+         display: block;
+         position: absolute;
+         width: 60px;
+         height: 3px;
+         background: #f38181;
+         left: 30px;
+         transform: translateX(-50%);
+         bottom: -20px;
+      }
+   }
+
+   &__text {
+      margin-top: 35px;
+
+      font-family: $fonttext;
+      font-size: 15px;
+      line-height: 24px;
+      color: $colortext;
+
+      max-width: 380px;
+   }
+}
+
+@media (max-width: 768px) {
+   .clients {
+
+      &__body {
+         margin: 80px 0 0;
+      }
+
+      &__col {
+         flex-basis: 100%;
+         text-align: center;
+         padding-left: 0;
+         padding-right: 0;
+      }
+
+      &__item {
+         display: block;
+      }
+
+      &__image {
+         margin: 0;
+      }
+
+      &__info {
+         margin-top: 20px;
+      }
+
+      &__prof {
+
+         &:after {
+            left: 50%;
+            transform: translateX(-50%);
+         }
+      }
+
+      &__text {
+         max-width: 500px;
+         margin: 35px auto 0;
+      }
+   }
+}

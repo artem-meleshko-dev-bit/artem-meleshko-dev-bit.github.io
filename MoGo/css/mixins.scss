@@ -1,0 +1,23 @@
+@mixin fonttitle {
+   font-family: $fonttitle;
+   color: $colortitle;
+   font-size: 30px;
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: bold;
+}
+
+@mixin fontdecor {
+   font-family: $fontdecor;
+   color: $colortitle;
+   font-size: 24px;
+   color: $colortitle;
+   text-align: center;
+}
+
+@mixin fonttext {
+   font-family: $fonttext;
+   color: $colortext;
+   font-size: 15px;
+   line-height: 24px;
+}

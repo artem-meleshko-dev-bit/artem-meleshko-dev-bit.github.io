@@ -1,0 +1,46 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.map {
+   padding-top: 55px;
+   padding-bottom: 80px;
+   background: url(../img/map-bg.jpg) center center no-repeat;
+   background-size: cover;
+   &__body {
+      text-align: center;
+   }
+
+   &__title {
+      font-size: 24px;
+      color: #f38181;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      position: relative;
+
+      &:after {
+         content: '';
+         display: block;
+         position: absolute;
+
+         width: 0;
+         height: 3px;
+         background: #f38181;
+         bottom: -22px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+
+      &:hover:after {
+         width: 60px;
+         transition: all .3s ease 0s;
+      }
+   }
+
+   &__icon {
+      font-size: 24px;
+      color: #f38181;
+
+      margin-bottom: 17px;
+   }
+}

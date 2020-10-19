@@ -1,0 +1,163 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.team {
+   padding: 95px 0;
+   &__head {
+   }
+
+   &__subtitle {
+      @include fontdecor;
+   }
+
+   &__title {
+      @include fonttitle;
+      margin-top: 20px;
+
+      position: relative;
+
+      &:after {
+         content: '';
+         display: block;
+         position: absolute;
+         width: 60px;
+         height: 3px;
+         background: #f38181;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: -40px;
+      }
+   }
+
+   &__text {
+      @include fonttext;
+      margin: 0 auto;
+      margin-top: 85px;
+      max-width: 970px;
+      text-align: center;
+   }
+
+   &__body {
+      margin: 90px -15px 0;
+      display: flex;
+   }
+
+   &__col {
+      padding: 0 15px;
+      flex-basis: 33.333%;
+   }
+
+   &__item {
+      background: #95e1d3;
+
+      position: relative;
+
+      &:hover .team__photo {
+         opacity: 0.1;
+         transition: opacity .2s linear;
+      }
+
+      &:hover .team__image {
+         transform: translate3d(-10px, -10px, 0);
+      }
+
+      &:hover .team__social {
+         opacity: 1; 
+         transition: opacity .2s linear;
+      }
+   }
+
+   &__image {
+      background: linear-gradient(to bottom, #f38181, #fce38a);
+      transition: transform .2s linear;
+      
+   }
+
+   &__photo {
+      display: block;
+      max-width: 100%;
+      height: auto;
+   }
+
+   &__social {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      display: flex;
+
+      opacity: 0;
+   }
+
+   &__link {
+      font-size: 24px;
+      color: #f38181;
+
+      border-right: 1px solid #f9bd87;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      background: #fce38a;
+
+      &:hover {
+         background: #f38181;
+         color: #fff;
+
+         transition: background .2s linear;
+      }
+
+      &:last-child {
+         border-right: none;
+      }
+   }
+
+   &__name {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $colortitle;
+
+      font-weight: bold;
+      text-align: center;
+
+      margin-top: 30px;
+   }
+
+   &__prof {
+      font-family: $fonttext;
+      font-size: 15px;
+      font-weight: 300;
+      font-style: italic;
+      color: $colortext;
+      text-align: center;
+
+      margin-top: 12px;
+   }
+}
+
+@media (max-width: 768px) {
+   .team {
+      padding-bottom: 0;
+      &__body {
+         display: block;
+         margin-left: 0;
+         margin-right: 0;
+      }
+
+      &__col {
+         flex-basis: 100%;
+         padding: 0;
+         margin-bottom: 30px;
+      }
+
+      &__item {
+         max-width: 380px;
+         margin: 0 auto;
+      }
+
+      &__photo {
+      }
+   }
+}
