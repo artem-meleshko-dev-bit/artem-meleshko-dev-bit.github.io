@@ -514,6 +514,8 @@ body {
 /* Слайдер */
 .slider {
   position: relative;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 /* Слайдер запущен */
@@ -540,7 +542,7 @@ body {
   font-size: 0;
   width: 22px;
   height: 41px;
-  z-index: 10;
+  z-index: 20;
   margin-top: -20.5px;
 }
 
