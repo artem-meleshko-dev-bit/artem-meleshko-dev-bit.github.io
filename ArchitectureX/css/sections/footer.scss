@@ -1,0 +1,57 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.footer {
+   background: #171717;
+   padding-top: 60px;
+   padding-bottom: 35px;
+   text-align: center;
+   &__logo {
+      font-family: $fontheading;
+      font-size: 25px;
+      font-weight: bold;
+      font-style: italic;
+      color: #fff;
+      margin-bottom: 35px;
+
+      span {
+         color: $colorYellow;
+      }
+   }
+
+   &__copy {
+      font-family: $fontheading;
+      font-size: 16px;
+      color: #e9e9e9;
+      line-height: 20px;
+   }
+}
+
+.social {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   margin-bottom: 30px;
+   &__link {
+      font-size: 15px;
+      color: #e9e9e9;
+
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #959595;
+
+      margin-left: 20px;
+
+      &:hover {
+         background: $colorYellow;
+         color: #1f1f1f;
+         border-color: $colorYellow;
+
+         transition: all 0.3s ease 0s;
+      }
+   }
+}
